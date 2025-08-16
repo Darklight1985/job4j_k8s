@@ -17,6 +17,7 @@ spec:
       containers:
         - name: calculator
           image: arhanos/job4j_devops:v.1.0.1
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
           env:
