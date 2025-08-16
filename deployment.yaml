@@ -16,6 +16,13 @@ spec:
     spec:
       containers:
         - name: calculator
-          image: arhanos/job4j_devops:v.1
+          image: arhanos/job4j_devops:v.1.0.2
+          imagePullPolicy: Always
           ports:
             - containerPort: 8080
+          env:
+            - name: SPRING_DATASOURCE_URL
+              valueFrom:
+                configMapKeyRef:
+                  name: calculator
+                  key: database_url
