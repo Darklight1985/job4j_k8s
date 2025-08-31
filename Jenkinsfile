@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'agent-kubectl' }
+    agent { label 'jenkins-agent' }
 
     tools {
         git 'Default'
