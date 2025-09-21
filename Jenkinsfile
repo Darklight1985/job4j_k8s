@@ -4,6 +4,13 @@ pipeline {
         KUBECONFIG = '/home/jenkins/.kube/config'
     }
     stages {
+        stage('Debug') {
+            steps {
+                sh 'whoami'
+                sh 'ls -l /home/jenkins/.kube/config'
+                sh 'id'
+            }
+        }
         stage('kubectl') {
             steps {
                 sh 'kubectl version'
