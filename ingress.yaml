@@ -4,13 +4,13 @@ metadata:
   name: calculator-ingress
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    nginx.ingress.kubernetes.io/rewrite-target: /
+    nginx.ingress.kubernetes.io/rewrite-target: /calc/
 spec:
   rules:
     - host: calculator.local
       http:
         paths:
-          - path: /
+          - path: /calc/
             pathType: Prefix
             backend:
               service:
